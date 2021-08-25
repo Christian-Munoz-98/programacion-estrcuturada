@@ -4,14 +4,29 @@
 
 int main()
 {
-    int integerA = 1;
-    float floatA = 1.1;
-    char letterA = 'A';
-    double doubleA =  1.2;  //Es un decimal al igual que un float pero dispone de mas valor en memoria para guardar valores
-    bool boolean = false;
+    int integerA;
+    float floatA;
+    char letterA;
 
-    //En la siguiente linea estamos imprimiendo el integerA
-    printf("\nEl valor de nuestro entero A es: %i\n El valor de mi floatante A es: %f\n El valor de mi Double A es: %f\n EL valor de mi caracter A es: %c",integerA, floatA, doubleA, letterA);
+    printf("Ingresa el valor del entero A: ");
+    
+    scanf("%i",&integerA);
+
+    printf("Ingresa el valor del Float A: ");
+    
+    scanf("%f",&floatA);
+
+    printf("Ingresa el valor del Caracter A: ");
+    
+    scanf(" %c",&letterA);
+
+    printf("El entero A es: %i\n", integerA);
+
+    printf("El float  A es: %.2f\n", floatA);
+
+    printf("El caracter A es: %c\n",letterA);
+
+   
 
     return 0;
 }
