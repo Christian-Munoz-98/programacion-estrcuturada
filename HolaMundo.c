@@ -11,12 +11,7 @@ int main()
     bool boolean = false;
 
     //En la siguiente linea estamos imprimiendo el integerA
-    printf("El valor de nuestro entero A es: %i\n\n",integerA);
-    
-    printf("El valor de mi floatante A es: %f\n\n",floatA);
+    printf("El valor de nuestro entero A es: %i, El valor de mi floatante A es: %f, El valor de mi Double A es: %f, EL valor de mi caracter A es: %c",integerA, floatA, doubleA, letterA);
 
-    printf("El valor de mi Double A es: %f\n\n",doubleA);
-
-    printf("EL valor de mi caracter A es: %c\n\n",letterA);
     return 0;
 }
