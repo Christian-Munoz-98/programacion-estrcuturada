@@ -15,13 +15,14 @@ int main()
 
     printf("Condicion: \n");
 
-    if(valA == valB)
-        printf("No se va a cumplir esta condicion\n");
-    else if(valB == valC)
-        printf("Tampoco se va a cumplir\n");
-    else
+    if(valA < valB)
+        printf("Esta condicion si se cumplio\n");
+    
+    if(valB > valC)
+        printf("Esta no se va a cumplir\n");
+    else if (valC > valA)
     {
-        printf("Ninguna condicion se cumplio\n");
+        printf("Esta condicion se pudo cumplir\n");
         printf("Despues de esta linea el programa va a terminar");
     }
     
