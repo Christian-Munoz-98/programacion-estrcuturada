@@ -3,18 +3,16 @@
 
 int main()
 {
+    printf("Arreglos e iteradores\n");
+
     int i;
-    int numbers[56];
+    int integerArray[11];
 
-    for( i=0; i <56; i++)
+    for(i = 0; i < 11; i++)
     {
-        numbers[i]=i;
+        integerArray[i]= i*i;
+        printf("Valor (%i) : %i \n",i,integerArray[i]);
     }
 
-    for( i=0; i <56; i++)
-    {
-        printf("Numbers[%i] = %i\n",i,numbers[i]);
-    }
-    
     return 0;
 }
