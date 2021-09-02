@@ -21,22 +21,13 @@ int main()
     
     for( i = 0; i < 5; i++)
     {
-        float promedio=0;
+        float total=0;
         for(j = 0; j<5; j++)
         {
-            promedio += calificaciones[i][j];   
+            total += calificaciones[i][j];   
         }
-        promedio /= 5;
-        calificaciones[i][5] = promedio;
-        printf("El promedio de calificaciones de la fila %i es %f\n",i,promedio);
-    }
-
-    for( i = 0; i<5; i++)
-    {
-        for( j = 0; j <6 ; j++)
-        {
-            printf("calificaciones[%i][%i] = %f\n",i,j,calificaciones[i][j]);
-        }
+        calificaciones[i][5] = total/5;
+        printf("calificaciones[%i][6] ahora es %f\n",i,calificaciones[i][5]);
     }
 
     return 0;
