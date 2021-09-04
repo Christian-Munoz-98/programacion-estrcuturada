@@ -15,13 +15,14 @@ int main()
 
     size = strlen(originalstr);
 
-    //printf("%i\n",size);
-
     for( i= size; i > -1; i--)
     {
         
-        printf("%c",originalstr[i]);        
+        invertedStr[size-i] = originalstr[i];      
     }
+
+    printf("La cadena invertida es: ");
+    puts(invertedStr);
 
     return 0;
 }
