@@ -10,34 +10,21 @@ struct personalData
 
 int main()
 {
-    printf("Estructura de Datos!\n");
+    printf("Archivos! Lectura de archivos!\n");
 
     struct personalData person;
 
     FILE *archivo;
-    archivo = fopen("DatosPersonales001.dat", "wb");
+    archivo = fopen("DatosPersonales001.dat", "rb");
 
     if(archivo != NULL)
     {
-        fflush(stdin);
+        fread(&person, sizeof(person), 1, archivo);
 
-        printf("Leer datos: \n");
-        
-        printf("Ingresar nombre: \n");
-        gets(person.name);
-
-        printf("Ingresar apellido: \n");
-        gets(person.lastName);
-
-        printf("Ingresar edad: \n");
-        scanf("%i", &person.age);
-
-        printf("Imprimir datos:\n");
-        printf("%s\n",person.name);
-        printf("%s\n",person.lastName);
-        printf("%i\n",person.age);
-
-        fwrite(&person, sizeof(person), 1, archivo);
+        printf("imprimir los datos \n");
+        printf("Nombre: %s\n", person.name);
+        printf("Apellido: %s\n",person.lastName);
+        printf("Edad: %i\n",person.age);
 
         fclose(archivo);
     }
