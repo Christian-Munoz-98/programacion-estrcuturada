@@ -5,7 +5,7 @@
 -imprimir desde la funcion si el alumno aprobó´
 */
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 
 char alumno[];
@@ -31,5 +31,18 @@ int main()
 
     evaluacion();
 
+    return 0;
+}*/
+
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    for(i=0; i<256; i++)
+    {
+        printf("[%d]\t%x\t%c\n",i,i,i);
+    }
     return 0;
 }

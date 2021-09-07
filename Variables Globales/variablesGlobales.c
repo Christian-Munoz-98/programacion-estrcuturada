@@ -11,7 +11,7 @@ void check()
     printf("%s", publicText);
 
     printf("\nVariable local: \n");
-    printf("%s", privateText);
+    //printf("%s", privateText);
 }
 
 
