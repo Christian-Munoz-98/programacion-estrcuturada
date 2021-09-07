@@ -14,22 +14,37 @@ int main()
 
     struct personalData person;
 
-    printf("Leer datos: \n");
-    
-    printf("Ingresar nombre: \n");
-    gets(person.name);
+    FILE *archivo;
+    archivo = fopen("DatosPersonales001.dat", "wb");
 
-    printf("Ingresar apellido: \n");
-    gets(person.lastName);
+    if(archivo != NULL)
+    {
+        fflush(stdin);
 
-    printf("Ingresar edad: \n");
-    scanf("%i", &person.age);
+        printf("Leer datos: \n");
+        
+        printf("Ingresar nombre: \n");
+        gets(person.name);
 
-    printf("Imprimir datos:\n");
-    printf("%s\n",person.name);
-    printf("%s\n",person.lastName);
-    printf("%i\n",person.age);
+        printf("Ingresar apellido: \n");
+        gets(person.lastName);
 
+        printf("Ingresar edad: \n");
+        scanf("%i", &person.age);
+
+        printf("Imprimir datos:\n");
+        printf("%s\n",person.name);
+        printf("%s\n",person.lastName);
+        printf("%i\n",person.age);
+
+        fwrite(&person, sizeof(person), 1, archivo);
+
+        fclose(archivo);
+    }
+    else
+    {
+        printf("No se ha podido crear el archivo");
+    }
 
     return 0;
 }
